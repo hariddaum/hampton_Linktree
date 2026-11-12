@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#121212">
+  <meta name="description" content="용산 코르디아 CORDIA. 호텔이 직접 운영하는 오피스텔, 오직 88실. Hampton 갤러리 방문 상담 안내.">
+  <title>CORDIA 용산 | Hampton Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#121212;--panel:#1b1b19;--gold:#d4af37;--champagne:#dbc58e;--text:#f4f1eb;--muted:#a7a59e;--line:rgba(219,197,142,.19);--ease:cubic-bezier(.22,1,.36,1)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px;background:#090909}
+    body{margin:0;color:var(--text);background:#090909;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;line-height:1.65}
+    body.modal-open{overflow:hidden}
+    button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}
+    button{cursor:pointer}a{color:inherit;text-decoration:none}button{color:inherit}img{display:block;width:100%;height:auto}h1,h2,h3,p,figure{margin:0}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+    .page{position:relative;max-width:480px;margin:0 auto;background:var(--bg);overflow:clip;min-height:100vh}
+    .skip-link{position:fixed;top:-80px;left:16px;z-index:50;background:var(--gold);color:#121212;padding:12px}.skip-link:focus{top:12px}
+    .brand-header{height:91px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);margin:0 26px;position:relative}
+    .brand{font-family:Georgia,"Times New Roman",serif;font-size:31px;font-weight:400;letter-spacing:-1.5px;line-height:1}.brand span{display:block;text-align:center;font-family:Arial,sans-serif;letter-spacing:3.5px;font-size:7px;margin-top:9px;color:var(--champagne)}
+    .header-mark{position:absolute;right:0;top:37px;color:var(--champagne)}
+    .hero-intro{text-align:center;padding:36px 22px 28px}
+    .eyebrow{font-size:9px;letter-spacing:2.8px;color:var(--champagne);font-weight:600;line-height:1.7;text-transform:uppercase}
+    .hero h1{font-family:Arial,sans-serif;font-size:clamp(49px,15vw,72px);line-height:1.15;font-weight:400;letter-spacing:.14em;padding-left:.14em;color:var(--champagne);margin:14px 0 17px}
+    .hero-copy{font-size:21px;font-weight:500;line-height:1.65;letter-spacing:-.7px}.hero-copy strong{font-weight:700;color:var(--champagne)}
+    .hero-location{font-size:11px;color:var(--muted);margin-top:13px;letter-spacing:.9px}
+    .gallery-shell{position:relative}.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.gallery::-webkit-scrollbar{display:none}
+    .slide{flex:0 0 100%;min-width:0;scroll-snap-align:center;scroll-snap-stop:always;position:relative}.slide img{height:auto;object-fit:contain}.slide-caption{padding:11px 26px 0;font-size:9px;letter-spacing:1.7px;color:var(--muted)}
+    .gallery-arrow{position:absolute;top:calc(50% - 32px);width:34px;height:42px;border:1px solid #ffffff30;background:#12121265;backdrop-filter:blur(8px);display:grid;place-items:center;z-index:1}.gallery-arrow.prev{left:12px}.gallery-arrow.next{right:12px}.gallery-arrow svg{width:15px;height:15px}
+    .gallery-footer{display:flex;align-items:center;justify-content:space-between;margin:0 26px;padding-top:16px}.gallery-dots{display:flex;gap:3px}.gallery-dot{padding:10px 3px;border:0;background:none}.gallery-dot::before{content:"";display:block;width:17px;height:2px;background:#52504a;transition:background .2s,width .2s}.gallery-dot[aria-current="true"]::before{background:var(--champagne);width:32px}.gallery-counter{font-size:10px;color:var(--muted);letter-spacing:2px}.gallery-counter span{color:var(--champagne)}
+    .hero-invitation{margin:29px 26px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 0 24px;font-size:12px;color:var(--champagne)}.arrow{font-size:23px;font-weight:300;line-height:1}
+    .section{padding:58px 26px}.section-label{display:flex;align-items:center;gap:10px;margin-bottom:17px}.section-label::before{content:"";display:block;width:23px;height:1px;background:var(--champagne)}
+    h2{font-size:29px;line-height:1.45;font-weight:650;letter-spacing:-1.25px}.section-description{font-size:12px;color:var(--muted);font-weight:300;margin-top:14px;line-height:1.9}
+    .sales{padding-bottom:51px}.sales h2{font-size:27px}.sales-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:27px}.sales-card{background:linear-gradient(155deg,#25231d,#191918);border:1px solid var(--line);padding:19px 6px 17px;text-align:center}.sales-number{color:var(--champagne);font-family:Arial,sans-serif;font-size:36px;font-weight:400;line-height:1.2;letter-spacing:-1px}.sales-number small{font-size:17px;margin-left:2px}.sales-title{font-size:11px;margin-top:9px;font-weight:500;line-height:1.6}.sales-note{font-size:9px;color:var(--muted);margin-top:4px;letter-spacing:-.3px}.fine-print{color:#88877f;font-size:10px;line-height:1.9;margin-top:17px}
+    .divider{height:1px;background:var(--line);margin:0 26px}.why{padding-top:48px}.why-heading{margin-bottom:29px}.why h2 em{font-style:normal;color:var(--champagne)}
+    .feature{border:1px solid var(--line);margin-top:18px;background:#181817}.feature-image{overflow:hidden;background:#27251f}.feature-image img{aspect-ratio:1.78;object-fit:cover;transition:transform 1s var(--ease)}.feature:hover .feature-image img{transform:scale(1.025)}.feature-body{padding:23px 22px 25px}.feature-label{display:flex;align-items:center;gap:11px;font-size:9px;letter-spacing:2.2px;color:var(--champagne)}.feature-label span{font-family:Georgia,serif;font-size:18px;letter-spacing:0;border-right:1px solid var(--line);padding-right:11px;line-height:1}
+    .feature h3{font-size:22px;font-weight:600;line-height:1.5;letter-spacing:-.7px;margin-top:12px}.feature p{font-size:12px;color:var(--muted);font-weight:300;line-height:1.85;margin-top:10px}.feature-detail{display:inline-block;margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;letter-spacing:1px;color:var(--champagne)}
+    .private{position:relative;background:#1c1d19;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.private::after{content:"H";position:absolute;right:12px;top:10px;font-family:Georgia,serif;line-height:1;font-size:235px;color:#d4af3706;pointer-events:none}.private h2,.private>p,.schedule,.private>a{position:relative;z-index:1}.private h2{font-size:29px}
+    .schedule{margin-top:29px;border-top:1px solid var(--line)}.schedule-row{display:flex;align-items:center;gap:21px;padding:22px 0;border-bottom:1px solid var(--line)}.schedule-date{font-family:Georgia,serif;font-size:32px;line-height:1.1;color:var(--champagne);width:86px;flex-shrink:0;letter-spacing:-1px}.schedule-date small{font:9px Arial,sans-serif;letter-spacing:2px;display:block;margin-top:7px}.schedule-title{font-size:14px;font-weight:500}.schedule-sub{font-size:11px;color:var(--muted);margin-top:4px}.schedule-date.reservation{font-family:inherit;font-size:14px;letter-spacing:1px}.outline-link{display:flex;align-items:center;justify-content:space-between;border:1px solid #d4af3760;margin-top:26px;padding:14px 18px;color:var(--champagne);font-size:12px}
+    .overview{padding-top:43px;padding-bottom:44px}.overview .section-label{margin-bottom:12px}.overview details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:22px}.overview summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 0;font-size:16px;font-weight:500;letter-spacing:-.5px}.overview summary::-webkit-details-marker{display:none}.toggle-icon{position:relative;width:18px;height:18px;flex-shrink:0}.toggle-icon::before,.toggle-icon::after{content:"";position:absolute;top:8px;left:1px;width:16px;height:1px;background:var(--champagne);transition:transform .25s}.toggle-icon::after{transform:rotate(90deg)}details[open] .toggle-icon::after{transform:rotate(0)}.overview dl{margin:0 0 20px;border-top:1px solid var(--line)}.overview .info-row{display:grid;grid-template-columns:80px 1fr;padding:13px 0;border-bottom:1px solid #ffffff0b;font-size:12px}.overview dt{color:var(--muted)}.overview dd{margin:0;color:#dedbd3}.pending{color:#929187!important}
+    .reservation-section{padding:15px 16px 0}.reservation-card{background:#efede6;color:#24251f;padding:33px 23px 29px;position:relative;border-top:3px solid var(--champagne)}.reservation-card .eyebrow{color:#786637}.reservation-card h2{font-size:28px;margin-top:12px}.reservation-card .section-description{color:#716f66;margin-top:11px;font-size:12px}.reservation-rule{width:30px;height:1px;background:#ab9258;margin:25px 0}.form-group{margin-top:19px}.form-group label{display:block;font-size:12px;font-weight:600;margin-bottom:8px}.required{color:#94772b;padding-left:3px}input[type="text"],input[type="tel"],select{width:100%;height:49px;border:1px solid #d6d3c8;border-radius:0;background:#f8f7f2;color:#292a24;padding:0 13px;font-size:14px;transition:border-color .2s;color-scheme:light}input::placeholder{color:#aaa79d;font-size:12px}input:focus,select:focus{border-color:#a98b35}select{appearance:none;padding-right:35px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23716f66' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 13px center;background-repeat:no-repeat}select:invalid{color:#99968d}
+    .consent{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:22px}.consent label{display:flex;align-items:center;gap:8px;font-size:10px;color:#666358;cursor:pointer}.consent input{width:17px;height:17px;accent-color:#a9892e;flex-shrink:0;margin:0}.privacy-button{border:0;border-bottom:1px solid #b5ad99;background:none;color:#77715f;padding:3px 0;font-size:10px;white-space:nowrap}.submit-button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;border:0;background:var(--gold);color:#211e13;padding:17px 14px;font-size:13px;font-weight:650;margin-top:22px;min-height:54px;transition:background .2s}.submit-button:hover{background:#dfbd50}.submit-button:disabled{opacity:.65;cursor:wait}.form-footnote{font-size:10px;color:#898477;text-align:center;margin-top:12px;line-height:1.8}
+    .footer{padding:38px 26px calc(116px + env(safe-area-inset-bottom));text-align:center}.footer .brand{font-size:25px;color:#ccc7b8}.footer p{font-size:9px;color:#76766f;line-height:1.9;margin-top:19px}.footer .copyright{font-family:Arial,sans-serif;font-size:8px;letter-spacing:1px;margin-top:20px;color:#5d5d57}
+    .floating-bar{position:fixed;z-index:20;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,480px);background:rgba(18,18,18,.96);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px}.phone-button{flex:1;min-height:49px;background:var(--gold);color:#211e13;display:flex;align-items:center;justify-content:center;gap:9px;font-size:14px;font-weight:650;border:1px solid var(--gold)}.phone-button svg{width:16px;height:16px}.floating-reserve{width:105px;display:flex;align-items:center;justify-content:center;border:1px solid #a58c46;color:var(--champagne);font-size:12px}
+    dialog{color:var(--text);background:#1c1c19;border:1px solid #6d6040;max-width:min(390px,calc(100% - 40px));width:100%;padding:29px 24px;box-shadow:0 20px 100px #0008}dialog::backdrop{background:#000b;backdrop-filter:blur(5px)}dialog h2{font-size:23px;letter-spacing:-.5px}dialog p{font-size:12px;color:#bab7ac;line-height:1.9;white-space:pre-line;margin-top:16px}.dialog-close{width:100%;margin-top:25px;border:1px solid #9c8545;background:transparent;color:var(--champagne);padding:11px;font-size:13px}
+    @media(min-width:481px){.page{box-shadow:0 0 100px #0009}.brand-header{height:95px}}
+    @media(max-width:359px){.section{padding-left:20px;padding-right:20px}.hero-copy{font-size:19px}h2,.sales h2{font-size:25px}.sales-number{font-size:30px}.sales-title{font-size:10px}.sales-note{font-size:8px}.reservation-card{padding-left:18px;padding-right:18px}.submit-button{font-size:12px}.consent label{font-size:9px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  
+    .brand { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -.045em; }
+    .brand { font-size: 36px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#reservation">상담 예약으로 바로가기</a>
+  <div class="page">
+    <header class="brand-header">
+      <a class="brand" href="#top" aria-label="Hampton 처음으로">Hampton<span>REAL ESTATE</span></a>
+      <svg class="header-mark" width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M3 2v16M13 2v16M3 10h10M0 2h6M10 2h6M0 18h6M10 18h6" stroke="currentColor" stroke-width=".8"/></svg>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-intro">
+          <p class="eyebrow">The first hospitality house</p>
+          <h1 id="hero-title">CORDIA</h1>
+          <p class="hero-copy">호텔이 직접 운영하는 오피스텔<br><strong>오직 88실</strong></p>
+          <p class="hero-location">용산 한강로3가 신규 분양</p>
+        </div>
+        <div class="gallery-shell" role="region" aria-roledescription="이미지 갤러리" aria-label="코르디아 건축 및 공간">
+          <div class="gallery" id="gallery" tabindex="0" aria-label="좌우로 넘겨 공간 살펴보기">
+            <figure class="slide" role="group" aria-label="3장 중 1번째">
+              <img src="cordia_1.jpg" alt="도심의 푸른 저녁 하늘 아래 빛나는 코르디아 외관 야경 투시도" width="1021" height="566" fetchpriority="high">
+              <figcaption class="slide-caption">01 / ARCHITECTURE · NIGHT VIEW</figcaption>
+            </figure>
+            <figure class="slide" role="group" aria-label="3장 중 2번째">
+              <img src="cordia_2.jpg" alt="용산 도심과 함께 조망한 코르디아 건축 주경 투시도" width="1016" height="570" loading="lazy">
+              <figcaption class="slide-caption">02 / A NEW LANDMARK IN YONGSAN</figcaption>
+            </figure>
+            <figure class="slide" role="group" aria-label="3장 중 3번째">
+              <img src="cordia_3.jpg" alt="높은 천장과 통창으로 펼쳐지는 코르디아 거실 인테리어 예시" width="1020" height="568" loading="lazy">
+              <figcaption class="slide-caption">03 / WIDE &amp; BOUNDLESS LIVING</figcaption>
+            </figure>
+          </div>
+          <button class="gallery-arrow prev" type="button" aria-label="이전 이미지"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button class="gallery-arrow next" type="button" aria-label="다음 이미지"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+        </div>
+        <div class="gallery-footer">
+          <div class="gallery-dots" aria-label="이미지 선택">
+            <button class="gallery-dot" type="button" aria-label="1번 이미지 보기" aria-current="true"></button>
+            <button class="gallery-dot" type="button" aria-label="2번 이미지 보기" aria-current="false"></button>
+            <button class="gallery-dot" type="button" aria-label="3번 이미지 보기" aria-current="false"></button>
+          </div>
+          <p class="gallery-counter" aria-live="polite"><span id="slide-number">01</span> / 03</p>
+        </div>
+        <a class="hero-invitation" href="#reservation"><span>코르디아 방문 상담 안내</span><span class="arrow" aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="section sales" aria-labelledby="sales-title">
+        <p class="section-label eyebrow">An exceptional opportunity</p>
+        <h2 id="sales-title">오피스텔 분양,<br>먼저 확인하실 세 가지</h2>
+        <div class="sales-cards">
+          <div class="sales-card"><p class="sales-number">10<small>%</small></p><p class="sales-title">계약금</p><p class="sales-note">시작을 가볍게</p></div>
+          <div class="sales-card"><p class="sales-number">60<small>%</small></p><p class="sales-title">중도금 전액 무이자</p><p class="sales-note">이자 부담 없이</p></div>
+          <div class="sales-card"><p class="sales-number">88<small>실</small></p><p class="sales-title">한정된 프리미엄</p><p class="sales-note">2030·12 준공 예정</p></div>
+        </div>
+        <p class="fine-print">※ 상세 분양 조건 및 준공 일정은 상담을 통해 확인해 주세요.</p>
+      </section>
+      <div class="divider"></div>
+
+      <section class="section why" aria-labelledby="why-title">
+        <div class="why-heading"><p class="section-label eyebrow">Why Cordia</p><h2 id="why-title">삶의 기준을 바꾸는<br><em>네 가지 차이.</em></h2><p class="section-description">공간의 여유부터 호텔의 서비스까지.<br>코르디아에서 일상의 새로운 품격을 만납니다.</p></div>
+        <article class="feature">
+          <div class="feature-image"><img src="cordia_f1.jpg" alt="도심 야경을 마주하는 코르디아 다이닝과 거실 인테리어 예시" width="1022" height="574" loading="lazy"></div>
+          <div class="feature-body"><div class="feature-label"><span>01</span> PRODUCT</div><h3>전용 20평 ~ 80평대<br>당신의 스케일에 맞는 공간</h3><p>다양한 라이프스타일을 담아낼 넉넉한 공간.<br>취향과 일상이 자연스럽게 어우러집니다.</p><div class="feature-detail">TIMELESS &amp; REFINED</div></div>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="cordia_f2.jpg" alt="코르디아 17층 인피니티 풀과 라운지 커뮤니티 투시도" width="1033" height="479" loading="lazy"></div>
+          <div class="feature-body"><div class="feature-label"><span>02</span> AMENITY</div><h3>4 · 17 · 18층,<br>온전히 누리는 커뮤니티</h3><p>세 개 층 전체로 펼쳐지는 커뮤니티.<br>일상의 휴식이 특별한 경험이 되는 곳.</p><div class="feature-detail">THREE FLOORS, EXTRAORDINARY DAYS</div></div>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="cordia_f3.jpg" alt="우드 벽면 위 골드 컬러의 코르디아 서울드래곤시티 브랜드 사인" width="1017" height="581" loading="lazy"></div>
+          <div class="feature-body"><div class="feature-label"><span>03</span> HOSPITALITY</div><h3>서울드래곤시티가<br>직접 운영하는 일상</h3><p>24시간 발렛과 컨시어지.<br>호텔의 세심한 환대가 당신의 집으로 이어집니다.</p><div class="feature-detail">24H VALET &amp; CONCIERGE</div></div>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="cordia_f4.jpg" alt="용산 도심 내 코르디아와 주변 업무지구를 보여주는 조감 이미지" width="1016" height="570" loading="lazy"></div>
+          <div class="feature-body"><div class="feature-label"><span>04</span> LOCATION</div><h3>51조 국제업무지구,<br>그 미래의 바로 앞</h3><p>용산 한강로3가에서 만나는 새로운 중심.<br>변화하는 용산의 가능성을 가까이 누립니다.</p><div class="feature-detail">THE NEXT CENTER OF YONGSAN</div></div>
+        </article>
+        <p class="fine-print">※ 이미지는 이해를 돕기 위한 투시도 및 인테리어 예시이며 실제와 다를 수 있습니다. 개발 계획과 서비스의 세부 내용은 변경될 수 있습니다.</p>
+      </section>
+
+      <section class="section private" aria-labelledby="private-title">
+        <p class="section-label eyebrow">VISIT & CONSULTATION</p><h2 id="private-title">코르디아<br>방문 상담 안내</h2><p class="section-description">코르디아의 공간을 직접 둘러보고,<br>궁금하신 내용을 편하게 상담해 보세요.</p>
+        <div class="schedule">
+          <div class="schedule-row"><div class="schedule-date">10.30<small>GALLERY OPEN</small></div><div><p class="schedule-title">갤러리 오픈</p><p class="schedule-sub">코르디아의 공간과 가치를 만나보세요.</p></div></div>
+          <div class="schedule-row"><div class="schedule-date reservation">VISIT<small>BY APPOINTMENT</small></div><div><p class="schedule-title">갤러리 방문 상담</p><p class="schedule-sub">희망 시간 확인 후 개별 안내드립니다.</p></div></div>
+        </div>
+        <a class="outline-link" href="#reservation"><span>방문 상담 예약</span><span class="arrow" aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="section overview" aria-labelledby="overview-title">
+        <p class="section-label eyebrow" id="overview-title">Project overview</p>
+        <details><summary>오피스텔 분양 개요 보기<span class="toggle-icon" aria-hidden="true"></span></summary><dl>
+          <div class="info-row"><dt>사업명</dt><dd>용산 코르디아 CORDIA</dd></div>
+          <div class="info-row"><dt>위치</dt><dd>서울특별시 용산구 한강로3가</dd></div>
+          <div class="info-row"><dt>대지면적</dt><dd class="pending">상담 시 상세 안내</dd></div>
+          <div class="info-row"><dt>규모</dt><dd class="pending">상담 시 상세 안내</dd></div>
+          <div class="info-row"><dt>세대수</dt><dd>오피스텔 88실</dd></div>
+          <div class="info-row"><dt>전용면적</dt><dd>20평 ~ 80평대</dd></div>
+          <div class="info-row"><dt>주차</dt><dd>100% 자주식</dd></div>
+          <div class="info-row"><dt>커뮤니티</dt><dd>4층 · 17층 · 18층</dd></div>
+          <div class="info-row"><dt>운영</dt><dd>서울드래곤시티</dd></div>
+          <div class="info-row"><dt>준공 예정</dt><dd>2030년 12월</dd></div>
+        </dl></details>
+      </section>
+
+      <section class="reservation-section" id="reservation" aria-labelledby="reservation-title">
+        <div class="reservation-card"><p class="eyebrow">VISIT & CONSULTATION</p><h2 id="reservation-title">방문 상담 예약</h2><p class="section-description">성함과 연락처를 남겨주시면<br>담당자가 상담 일정을 안내해 드립니다.</p><div class="reservation-rule"></div>
+          <form id="reservation-form">
+            <div class="form-group"><label for="guest-name">이름<span class="required" aria-hidden="true">*</span></label><input id="guest-name" name="name" type="text" placeholder="성함을 입력해 주세요" autocomplete="name" required maxlength="40"></div>
+            <div class="form-group"><label for="guest-phone">연락처<span class="required" aria-hidden="true">*</span></label><input id="guest-phone" name="phone" type="tel" placeholder="010-0000-0000" autocomplete="tel" inputmode="tel" required maxlength="16" aria-describedby="phone-hint"><span id="phone-hint" hidden>연락 가능한 국내 전화번호를 입력해 주세요.</span></div>
+            <div class="form-group"><label for="guest-time">상담 희망시간<span class="required" aria-hidden="true">*</span></label><select id="guest-time" name="preferredTime" required><option value="" disabled selected>편하신 시간을 선택해 주세요</option value="10:00–12:00">오전 10:00 – 12:00</option><option value="12:00–14:00">오후 12:00 – 14:00</option><option value="14:00–16:00">오후 14:00 – 16:00</option><option value="16:00–18:00">오후 16:00 – 18:00</option><option value="anytime">시간 무관</option></select></div>
+            <div class="consent"><label for="privacy-consent"><input type="checkbox" id="privacy-consent" name="consent" required><span>개인정보 수집 및 이용 동의 <span class="required">(필수)</span></span></label><button type="button" class="privacy-button" id="privacy-open">내용 보기</button></div>
+            <button class="submit-button" type="submit"><span>방문 상담 예약하기</span><span class="arrow" aria-hidden="true">↗</span></button>
+            <p class="form-footnote" id="form-status" role="status">방문 일정은 담당자 확인 후 최종 확정됩니다.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><a class="brand" href="#top">Hampton<span>REAL ESTATE</span></a><p>용산 코르디아 · 오피스텔 분양 안내<br>본 페이지의 분양 정보와 일정은 변경될 수 있으며,<br>계약 시 공식 분양 자료를 확인해 주시기 바랍니다.</p><p class="copyright">© HAMPTON. ALL RIGHTS RESERVED.</p></footer>
+  </div>
+  <nav class="floating-bar" aria-label="빠른 상담"><a class="phone-button" id="phone-link" href="#contact-notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 3 3 5-3 3a15 15 0 0 0 6 6l3-3 5 3c0 3-2 4-4 4C10 21 3 14 3 7c0-2 1-4 4-4Z"/></svg>전화 상담</a><a class="floating-reserve" href="#reservation">방문 상담 예약 <span aria-hidden="true">↗</span></a></nav>
+  <dialog id="notice-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-message"><h2 id="dialog-title"></h2><p id="dialog-message"></p><form method="dialog"><button class="dialog-close">확인</button></form></dialog>
+  <script>
+    // 실제 운영 시 아래 세 항목을 설정하세요. API는 JSON POST 요청에 2xx로 응답해야 합니다.
+    const CONFIG = {
+      phoneNumber: '02-541-4989',             // 예: '02-1234-5678' (실제 상담 번호)
+      reservationEndpoint: '',     // 예약 접수 API 주소. 빈 값이면 개인정보를 전송하지 않습니다.
+      privacyNotice: ''            // 운영사의 확정된 개인정보 수집·이용 안내 전문
+    };
+
+    const gallery = document.querySelector('#gallery');
+    const slides = [...gallery.querySelectorAll('.slide')];
+    const dots = [...document.querySelectorAll('.gallery-dot')];
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let currentSlide = 0;
+    function goToSlide(index) {
+      const next = (index + slides.length) % slides.length;
+      gallery.scrollTo({left: next * gallery.clientWidth, behavior: reduceMotion.matches ? 'instant' : 'smooth'});
+    }
+    dots.forEach((dot, index) => dot.addEventListener('click', () => goToSlide(index)));
+    document.querySelector('.prev').addEventListener('click', () => goToSlide(currentSlide - 1));
+    document.querySelector('.next').addEventListener('click', () => goToSlide(currentSlide + 1));
+    let scrollFrame;
+    gallery.addEventListener('scroll', () => {
+      if (scrollFrame) return;
+      scrollFrame = requestAnimationFrame(() => {
+        currentSlide = Math.min(slides.length - 1, Math.max(0, Math.round(gallery.scrollLeft / gallery.clientWidth)));
+        dots.forEach((dot, index) => dot.setAttribute('aria-current', String(index === currentSlide)));
+        document.querySelector('#slide-number').textContent = String(currentSlide + 1).padStart(2, '0');
+        scrollFrame = null;
+      });
+    }, {passive:true});
+    gallery.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault(); goToSlide(currentSlide + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+    window.addEventListener('resize', () => gallery.scrollTo({left: currentSlide * gallery.clientWidth, behavior:'instant'}));
+
+    const dialog = document.querySelector('#notice-dialog');
+    function showNotice(title, message) {
+      document.querySelector('#dialog-title').textContent = title;
+      document.querySelector('#dialog-message').textContent = message;
+      dialog.showModal();
+      document.body.classList.add('modal-open');
+    }
+    dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+    dialog.addEventListener('click', event => {
+      const box = dialog.getBoundingClientRect();
+      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+    });
+    document.querySelector('#privacy-open').addEventListener('click', () => showNotice('개인정보 수집 및 이용 안내', CONFIG.privacyNotice || '상담 예약 시 이름, 연락처, 상담 희망시간을 수집하여 방문 일정 안내에 이용합니다.\n\n현재 정식 온라인 접수 준비 중입니다. 수집 주체, 보유 기간 및 동의 거부에 관한 최종 안내는 접수 서비스 오픈 시 제공됩니다. 현재 입력한 정보는 저장되거나 전송되지 않습니다.'));
+    const phoneLink = document.querySelector('#phone-link');
+    const phoneNumber = CONFIG.phoneNumber.replace(/[^\d+]/g, '');
+    if (phoneNumber) phoneLink.href = 'tel:' + phoneNumber;
+    else phoneLink.addEventListener('click', event => {event.preventDefault();showNotice('전화 상담 안내', '상담 전화번호 안내를 준비하고 있습니다.\n갤러리 오픈에 맞춰 정식 상담 채널을 안내드리겠습니다.');});
+
+    const form = document.querySelector('#reservation-form');
+    const phoneInput = document.querySelector('#guest-phone');
+    const nameInput = document.querySelector('#guest-name');
+    function validatePhone() {
+      const digits = phoneInput.value.replace(/[^\d]/g, '');
+      const valid = !/[^\d\s()+-]/.test(phoneInput.value) && /^0\d{8,10}$/.test(digits);
+      phoneInput.setCustomValidity(valid || !phoneInput.value ? '' : '연락 가능한 국내 전화번호를 정확히 입력해 주세요.');
+    }
+    phoneInput.addEventListener('input', validatePhone);
+    nameInput.addEventListener('input', () => nameInput.setCustomValidity(nameInput.value.trim() ? '' : '성함을 입력해 주세요.'));
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      validatePhone();
+      nameInput.setCustomValidity(nameInput.value.trim() ? '' : '성함을 입력해 주세요.');
+      if (!form.reportValidity()) return;
+      if (!CONFIG.reservationEndpoint || !CONFIG.privacyNotice) {
+        showNotice('온라인 예약 준비 중', '정식 온라인 예약 접수를 준비하고 있습니다.\n입력하신 개인정보는 저장되거나 전송되지 않았습니다. 서비스 오픈 후 다시 이용해 주세요.');
+        return;
+      }
+      const submit = form.querySelector('[type="submit"]');
+      const label = submit.querySelector('span');
+      submit.disabled = true; label.textContent = '예약 신청 중…';
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+      try {
+        const response = await fetch(CONFIG.reservationEndpoint, {
+          method:'POST', headers:{'Content-Type':'application/json'}, signal:controller.signal,
+          body:JSON.stringify({name:nameInput.value.trim(),phone:phoneInput.value.replace(/[^\d]/g,''),preferredTime:form.elements.preferredTime.value,consent:form.elements.consent.checked})
+        });
+        if (!response.ok) throw new Error('Submission failed');
+        form.reset();
+        document.querySelector('#form-status').textContent = '예약 신청이 접수되었습니다. 담당자가 순차적으로 연락드립니다.';
+        showNotice('예약 신청이 접수되었습니다', '코르디아에 관심을 가져주셔서 감사합니다.\n담당자가 연락드려 상담 일정을 안내해 드리겠습니다.');
+      } catch (error) {
+        showNotice('접수 결과를 확인해 주세요', '접수 결과를 확인하지 못했습니다. 중복 신청을 피하려면 상담 채널에서 접수 여부를 먼저 확인해 주세요.');
+      } finally {
+        clearTimeout(timeout); submit.disabled = false; label.textContent = '방문 상담 예약하기';
+      }
+    });
+  </script>
+</body>
+</html>
